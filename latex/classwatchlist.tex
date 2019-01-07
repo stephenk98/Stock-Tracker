@@ -1,0 +1,304 @@
+\hypertarget{classwatchlist}{}\section{watchlist Class Reference}
+\label{classwatchlist}\index{watchlist@{watchlist}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwatchlist_a8c630ba7e17201eb4c7e2cef8e5d6c92}{watchlist} ()
+\begin{DoxyCompactList}\small\item\em Next empty space in watchlist. \end{DoxyCompactList}\item 
+int \hyperlink{classwatchlist_acdb445a23fda216d0a3284b3835f33ff}{get\+Num\+Stocks} ()
+\begin{DoxyCompactList}\small\item\em This function gets the number of stocks in the watchlist. \end{DoxyCompactList}\item 
+void \hyperlink{classwatchlist_a889735bbad56c0e0df354fd7a9498d36}{add\+To\+Watchlist} (char $\ast$, char $\ast$$\ast$)
+\begin{DoxyCompactList}\small\item\em This function will add a stock to the watchlist. \end{DoxyCompactList}\item 
+void \hyperlink{classwatchlist_a95423fb8cdc057441ae85b01eb8a4a9d}{remove\+From\+Watchlist} (char $\ast$, char $\ast$$\ast$)
+\begin{DoxyCompactList}\small\item\em This function will remove a stock from the watchlist. \end{DoxyCompactList}\item 
+void \hyperlink{classwatchlist_a4b3a8998a154b4a394f8e4538f37c497}{display\+Watchlist\+Contents} (char $\ast$$\ast$)
+\begin{DoxyCompactList}\small\item\em This function displays the contents of the watchlist. \end{DoxyCompactList}\item 
+void \hyperlink{classwatchlist_aaae1b9ec02340e8cf7722fe1da575dc5}{display\+Data} (char $\ast$, char $\ast$$\ast$)
+\begin{DoxyCompactList}\small\item\em This function displays the data for a givne stock in the watchlist. \end{DoxyCompactList}\item 
+bool \hyperlink{classwatchlist_a2ddba00bedd1e566b6ae416875cf1910}{in\+List} (char $\ast$, char $\ast$$\ast$)
+\begin{DoxyCompactList}\small\item\em This is a helper function that checks the watchlist to see if the stock is in the watchlist. \end{DoxyCompactList}\item 
+int \hyperlink{classwatchlist_ac05cc228f237f6ba3f0235ff454994ce}{get\+First\+Empty\+Space} (char $\ast$$\ast$)
+\begin{DoxyCompactList}\small\item\em This is a helper function that checks the watchlist to find the next empty space. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwatchlist_a8782311d3913e8f9de87a2173edf5fbd}\label{classwatchlist_a8782311d3913e8f9de87a2173edf5fbd}} 
+char $\ast$$\ast$ {\bfseries w\+List}
+\item 
+\mbox{\Hypertarget{classwatchlist_a6a0c6b30cebb4590ea270b627e3a0181}\label{classwatchlist_a6a0c6b30cebb4590ea270b627e3a0181}} 
+std\+::string {\bfseries tick}
+\item 
+\mbox{\Hypertarget{classwatchlist_a584dfdf3cedb6d70b07432d24946967b}\label{classwatchlist_a584dfdf3cedb6d70b07432d24946967b}} 
+int {\bfseries num\+Stocks}
+\item 
+\mbox{\Hypertarget{classwatchlist_a38649ae900542165f3c247ca8f6f8ad4}\label{classwatchlist_a38649ae900542165f3c247ca8f6f8ad4}} 
+int {\bfseries first\+Empty}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwatchlist_a8c630ba7e17201eb4c7e2cef8e5d6c92}\label{classwatchlist_a8c630ba7e17201eb4c7e2cef8e5d6c92}} 
+\index{watchlist@{watchlist}!watchlist@{watchlist}}
+\index{watchlist@{watchlist}!watchlist@{watchlist}}
+\subsubsection{\texorpdfstring{watchlist()}{watchlist()}}
+{\footnotesize\ttfamily watchlist\+::watchlist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Next empty space in watchlist. 
+
+This is the constructor for the watchlist class
+
+Simply stores the number of stocks as public
+
+\begin{DoxyAuthor}{Author}
+Austin Brandon 
+
+Michael Moriyama 
+
+Mohammad Niazi 
+
+Stephen Kim 
+
+Hantao Jiang 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Void.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwatchlist_a889735bbad56c0e0df354fd7a9498d36}\label{classwatchlist_a889735bbad56c0e0df354fd7a9498d36}} 
+\index{watchlist@{watchlist}!add\+To\+Watchlist@{add\+To\+Watchlist}}
+\index{add\+To\+Watchlist@{add\+To\+Watchlist}!watchlist@{watchlist}}
+\subsubsection{\texorpdfstring{add\+To\+Watchlist()}{addToWatchlist()}}
+{\footnotesize\ttfamily void watchlist\+::add\+To\+Watchlist (\begin{DoxyParamCaption}\item[{char $\ast$}]{ticker,  }\item[{char $\ast$$\ast$}]{w\+List }\end{DoxyParamCaption})}
+
+
+
+This function will add a stock to the watchlist. 
+
+This function will add a stock to the watchlist by first checking if the stock is already in the watchlist if the stock is not in the watchlist already, it will be added to the first empty position then the number of stocks would be increased to match the added stock
+
+\begin{DoxyAuthor}{Author}
+Austin Brandon 
+
+Michael Moriyama 
+
+Mohammad Niazi 
+
+Stephen Kim 
+
+Hantao Jiang 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em ticker} & as the ticker that is inputed by teh user \\
+\hline
+{\em wlist} & which is pointer to char$\ast$ which is the array of watchlist \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwatchlist_aaae1b9ec02340e8cf7722fe1da575dc5}\label{classwatchlist_aaae1b9ec02340e8cf7722fe1da575dc5}} 
+\index{watchlist@{watchlist}!display\+Data@{display\+Data}}
+\index{display\+Data@{display\+Data}!watchlist@{watchlist}}
+\subsubsection{\texorpdfstring{display\+Data()}{displayData()}}
+{\footnotesize\ttfamily void watchlist\+::display\+Data (\begin{DoxyParamCaption}\item[{char $\ast$}]{ticker,  }\item[{char $\ast$$\ast$}]{w\+List }\end{DoxyParamCaption})}
+
+
+
+This function displays the data for a givne stock in the watchlist. 
+
+This function first checks if the given ticker is in the watchlist if the ticker is in the watchlist, it would then output the stock information for that given ticker as the information would be stored in a string array then using a for loop, would be outputed \begin{DoxyAuthor}{Author}
+Austin Brandon 
+
+Michael Moriyama 
+
+Mohammad Niazi 
+
+Stephen Kim 
+
+Hantao Jiang 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em ticker} & which is the ticker entered by the user \\
+\hline
+{\em wlist} & which is pointer to char$\ast$ which is the array of watchlist \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwatchlist_a4b3a8998a154b4a394f8e4538f37c497}\label{classwatchlist_a4b3a8998a154b4a394f8e4538f37c497}} 
+\index{watchlist@{watchlist}!display\+Watchlist\+Contents@{display\+Watchlist\+Contents}}
+\index{display\+Watchlist\+Contents@{display\+Watchlist\+Contents}!watchlist@{watchlist}}
+\subsubsection{\texorpdfstring{display\+Watchlist\+Contents()}{displayWatchlistContents()}}
+{\footnotesize\ttfamily void watchlist\+::display\+Watchlist\+Contents (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{w\+List }\end{DoxyParamCaption})}
+
+
+
+This function displays the contents of the watchlist. 
+
+This function checks first to see if there are stocks in the watchlist if there are stocks in the watchlist, this function would then output the stocks ouf the watchlist this is done using a for loop up to 10 as there can only be 10 stocks at most in the watchlist the function checks if there is less than 10 stocks and would not output if there is less than 10
+
+\begin{DoxyAuthor}{Author}
+Austin Brandon 
+
+Michael Moriyama 
+
+Mohammad Niazi 
+
+Stephen Kim 
+
+Hantao Jiang 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em w\+List} & as a pointer to char$\ast$ which is the array storing the watchlist objects \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwatchlist_ac05cc228f237f6ba3f0235ff454994ce}\label{classwatchlist_ac05cc228f237f6ba3f0235ff454994ce}} 
+\index{watchlist@{watchlist}!get\+First\+Empty\+Space@{get\+First\+Empty\+Space}}
+\index{get\+First\+Empty\+Space@{get\+First\+Empty\+Space}!watchlist@{watchlist}}
+\subsubsection{\texorpdfstring{get\+First\+Empty\+Space()}{getFirstEmptySpace()}}
+{\footnotesize\ttfamily int watchlist\+::get\+First\+Empty\+Space (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{w\+List }\end{DoxyParamCaption})}
+
+
+
+This is a helper function that checks the watchlist to find the next empty space. 
+
+This is a helper function that would iterate through the watchlist array it will then return the first position that does not have a stock already there
+
+\begin{DoxyAuthor}{Author}
+Austin Brandon 
+
+Michael Moriyama 
+
+Mohammad Niazi 
+
+Stephen Kim 
+
+Hantao Jiang 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em wlist} & which is pointer to char$\ast$ which is the array of watchlist \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int, which is the position in the array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwatchlist_acdb445a23fda216d0a3284b3835f33ff}\label{classwatchlist_acdb445a23fda216d0a3284b3835f33ff}} 
+\index{watchlist@{watchlist}!get\+Num\+Stocks@{get\+Num\+Stocks}}
+\index{get\+Num\+Stocks@{get\+Num\+Stocks}!watchlist@{watchlist}}
+\subsubsection{\texorpdfstring{get\+Num\+Stocks()}{getNumStocks()}}
+{\footnotesize\ttfamily int watchlist\+::get\+Num\+Stocks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function gets the number of stocks in the watchlist. 
+
+This function returns the number of stocks in the watchlist
+
+\begin{DoxyAuthor}{Author}
+Austin Brandon 
+
+Michael Moriyama 
+
+Mohammad Niazi 
+
+Stephen Kim 
+
+Hantao Jiang 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Void.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int, which is the number of stocks 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwatchlist_a2ddba00bedd1e566b6ae416875cf1910}\label{classwatchlist_a2ddba00bedd1e566b6ae416875cf1910}} 
+\index{watchlist@{watchlist}!in\+List@{in\+List}}
+\index{in\+List@{in\+List}!watchlist@{watchlist}}
+\subsubsection{\texorpdfstring{in\+List()}{inList()}}
+{\footnotesize\ttfamily bool watchlist\+::in\+List (\begin{DoxyParamCaption}\item[{char $\ast$}]{ticker,  }\item[{char $\ast$$\ast$}]{w\+List }\end{DoxyParamCaption})}
+
+
+
+This is a helper function that checks the watchlist to see if the stock is in the watchlist. 
+
+The function iterates through the watchlist and if the stock is there, it will set the retun to true the check is done using the strcmp as we are comparing strings
+
+\begin{DoxyAuthor}{Author}
+Austin Brandon 
+
+Michael Moriyama 
+
+Mohammad Niazi 
+
+Stephen Kim 
+
+Hantao Jiang 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em ticker} & as the ticker that is inputed by teh user \\
+\hline
+{\em wlist} & which is pointer to char$\ast$ which is the array of watchlist \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool which shows whether the stock is in the watchlist or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwatchlist_a95423fb8cdc057441ae85b01eb8a4a9d}\label{classwatchlist_a95423fb8cdc057441ae85b01eb8a4a9d}} 
+\index{watchlist@{watchlist}!remove\+From\+Watchlist@{remove\+From\+Watchlist}}
+\index{remove\+From\+Watchlist@{remove\+From\+Watchlist}!watchlist@{watchlist}}
+\subsubsection{\texorpdfstring{remove\+From\+Watchlist()}{removeFromWatchlist()}}
+{\footnotesize\ttfamily void watchlist\+::remove\+From\+Watchlist (\begin{DoxyParamCaption}\item[{char $\ast$}]{ticker,  }\item[{char $\ast$$\ast$}]{w\+List }\end{DoxyParamCaption})}
+
+
+
+This function will remove a stock from the watchlist. 
+
+This function will see if the stock is in the watchlist if the stock is in the watchlist, it will remove the stock by setting it to N\+U\+LL then the number of stocks will be decreased to match the removed stock
+
+\begin{DoxyAuthor}{Author}
+Austin Brandon 
+
+Michael Moriyama 
+
+Mohammad Niazi 
+
+Stephen Kim 
+
+Hantao Jiang 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em ticker} & as the ticker that is inputed by teh user \\
+\hline
+{\em wlist} & which is pointer to char$\ast$ which is the array of watchlist \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+watchlist.\+h\item 
+\hyperlink{watchlist_8cpp}{watchlist.\+cpp}\end{DoxyCompactItemize}

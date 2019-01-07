@@ -1,0 +1,216 @@
+\hypertarget{DataGrabber_8cpp}{}\section{Data\+Grabber.\+cpp File Reference}
+\label{DataGrabber_8cpp}\index{Data\+Grabber.\+cpp@{Data\+Grabber.\+cpp}}
+
+
+This file drives the program as in includes the main.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$jsoncpp/json/json.\+h$>$}\newline
+{\ttfamily \#include $<$curl/curl.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}I\+E\+X.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}watchlist.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for Data\+Grabber.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{DataGrabber_8cpp_ab7f1b5cf33cf60fd9f9d90bd25c334af}{get\+Indices} ()
+\begin{DoxyCompactList}\small\item\em This function outputs the indexes and their information. \end{DoxyCompactList}\item 
+void \hyperlink{DataGrabber_8cpp_a2119fdc8f0cf62060a28ec436c24e59a}{get\+Vol} ()
+\begin{DoxyCompactList}\small\item\em This function gets the volume of a stock or index. \end{DoxyCompactList}\item 
+void \hyperlink{DataGrabber_8cpp_a3209c37322feb23f2fdd1297bb1edc02}{get\+News} ()
+\begin{DoxyCompactList}\small\item\em This function takes in an user inputed ticker and then outputs the news information for that stock. \end{DoxyCompactList}\item 
+void \hyperlink{DataGrabber_8cpp_ad99646f388270553cc9c906a5565e4d8}{get\+Search\+Result} ()
+\begin{DoxyCompactList}\small\item\em This function outputs the stats and financial information of a company given a ticker. \end{DoxyCompactList}\item 
+int \hyperlink{DataGrabber_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\begin{DoxyCompactList}\small\item\em This is the main function that includes the menu choices that are selected by user which are then run. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{DataGrabber_8cpp_a69eba3d214c79c6c79c71e929c9d17f8}\label{DataGrabber_8cpp_a69eba3d214c79c6c79c71e929c9d17f8}} 
+char $\ast$ {\bfseries w\+List} \mbox{[}10\mbox{]}
+\item 
+\mbox{\Hypertarget{DataGrabber_8cpp_aa7f4f9c20c3121ea610508920754d674}\label{DataGrabber_8cpp_aa7f4f9c20c3121ea610508920754d674}} 
+\hyperlink{classwatchlist}{watchlist} $\ast$ {\bfseries w\+Obj} = new \hyperlink{classwatchlist}{watchlist}()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file drives the program as in includes the main. 
+
+This file contains the main function for the program and the functions that gets the required data from our A\+PI. Another important role of this file is to create the watchlist object which is instantiated in this file to store the stock information for users.
+
+\begin{DoxyAuthor}{Author}
+Austin Brandon 
+
+Michael Moriyama 
+
+Mohammad Niazi 
+
+Stephen Kim 
+
+Hantao Jiang 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000001}{Bug}]No known bugs. \end{DoxyRefDesc}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{DataGrabber_8cpp_ab7f1b5cf33cf60fd9f9d90bd25c334af}\label{DataGrabber_8cpp_ab7f1b5cf33cf60fd9f9d90bd25c334af}} 
+\index{Data\+Grabber.\+cpp@{Data\+Grabber.\+cpp}!get\+Indices@{get\+Indices}}
+\index{get\+Indices@{get\+Indices}!Data\+Grabber.\+cpp@{Data\+Grabber.\+cpp}}
+\subsubsection{\texorpdfstring{get\+Indices()}{getIndices()}}
+{\footnotesize\ttfamily void get\+Indices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function outputs the indexes and their information. 
+
+Very neat function that simply calls upon the I\+EX A\+PI to output all the indexes as well as their information and there is no need for user input due to the nature of indexes, we want to display as many as possible
+
+\begin{DoxyAuthor}{Author}
+Austin Brandon 
+
+Michael Moriyama 
+
+Mohammad Niazi 
+
+Stephen Kim 
+
+Hantao Jiang 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Void.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{DataGrabber_8cpp_a3209c37322feb23f2fdd1297bb1edc02}\label{DataGrabber_8cpp_a3209c37322feb23f2fdd1297bb1edc02}} 
+\index{Data\+Grabber.\+cpp@{Data\+Grabber.\+cpp}!get\+News@{get\+News}}
+\index{get\+News@{get\+News}!Data\+Grabber.\+cpp@{Data\+Grabber.\+cpp}}
+\subsubsection{\texorpdfstring{get\+News()}{getNews()}}
+{\footnotesize\ttfamily void get\+News (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function takes in an user inputed ticker and then outputs the news information for that stock. 
+
+The user inputs a ticker which is then checked to ensure proper ticker which is then passed to the I\+EX A\+PI to pull news information for that stock. The number of news articles chosen to output is currently 5. Expansion of the program would allow users to dicate the number of news articles and may even offer the option to get more news articles after receiving 5
+
+\begin{DoxyAuthor}{Author}
+Austin Brandon 
+
+Michael Moriyama 
+
+Mohammad Niazi 
+
+Stephen Kim 
+
+Hantao Jiang 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Void.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{DataGrabber_8cpp_ad99646f388270553cc9c906a5565e4d8}\label{DataGrabber_8cpp_ad99646f388270553cc9c906a5565e4d8}} 
+\index{Data\+Grabber.\+cpp@{Data\+Grabber.\+cpp}!get\+Search\+Result@{get\+Search\+Result}}
+\index{get\+Search\+Result@{get\+Search\+Result}!Data\+Grabber.\+cpp@{Data\+Grabber.\+cpp}}
+\subsubsection{\texorpdfstring{get\+Search\+Result()}{getSearchResult()}}
+{\footnotesize\ttfamily void get\+Search\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function outputs the stats and financial information of a company given a ticker. 
+
+This function gets the ticker from the user which is then validated. Once the ticker is validated, it is used by the I\+EX A\+PI to return the pertinent stock information for that ticker the information is stored in a string array and then outputed
+
+\begin{DoxyAuthor}{Author}
+Austin Brandon 
+
+Michael Moriyama 
+
+Mohammad Niazi 
+
+Stephen Kim 
+
+Hantao Jiang 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Void.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{DataGrabber_8cpp_a2119fdc8f0cf62060a28ec436c24e59a}\label{DataGrabber_8cpp_a2119fdc8f0cf62060a28ec436c24e59a}} 
+\index{Data\+Grabber.\+cpp@{Data\+Grabber.\+cpp}!get\+Vol@{get\+Vol}}
+\index{get\+Vol@{get\+Vol}!Data\+Grabber.\+cpp@{Data\+Grabber.\+cpp}}
+\subsubsection{\texorpdfstring{get\+Vol()}{getVol()}}
+{\footnotesize\ttfamily void get\+Vol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function gets the volume of a stock or index. 
+
+This function allows the user to choose whether to check the volume of a stock or index. After taking in the user input, the function allows the user to input a stock or index of which the volume is then returned. The menu options as well as the ticker are checked for valid input but the index does not have any input due to the nature of stock indexes
+
+\begin{DoxyAuthor}{Author}
+Austin Brandon 
+
+Michael Moriyama 
+
+Mohammad Niazi 
+
+Stephen Kim 
+
+Hantao Jiang 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Void.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{DataGrabber_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{DataGrabber_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{Data\+Grabber.\+cpp@{Data\+Grabber.\+cpp}!main@{main}}
+\index{main@{main}!Data\+Grabber.\+cpp@{Data\+Grabber.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This is the main function that includes the menu choices that are selected by user which are then run. 
+
+This is the main function that drives the whole program which includes the menu that takes the user\textquotesingle{}s input and and then runs the selection that the user provides. It also provides the necessary choices for the watchlist user story as it checks that the watchlist is not empty and other watchlist conditions
+
+\begin{DoxyAuthor}{Author}
+Austin Brandon 
+
+Michael Moriyama 
+
+Mohammad Niazi 
+
+Stephen Kim 
+
+Hantao Jiang 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Void.} & Main function takes no parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void. Main function 
+\end{DoxyReturn}
